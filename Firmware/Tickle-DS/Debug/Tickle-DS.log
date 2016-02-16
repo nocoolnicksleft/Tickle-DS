@@ -1,0 +1,2 @@
+﻿        0 [main] make 11432 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+      361 [main] make 11432 open_stackdumpfile: Dumping stack trace to make.exe.stackdump

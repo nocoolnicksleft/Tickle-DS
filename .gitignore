@@ -1,0 +1,9 @@
+# Ignore list 
+
+Thumbs.db
+*.bak
+*.bin
+build
+data
+dataprepare
+obj

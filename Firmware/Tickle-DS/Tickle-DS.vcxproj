@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4106AAF5-0CE2-4251-BC51-9414A5019278}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>make -r  2&gt;&amp;1 | sed -e %27s/\(.[a-zA-Z]\ \):\([0-9]\ \):/\1(\2):/%27</NMakeBuildCommandLine>
+    <NMakeOutput>ansi_console.nds</NMakeOutput>
+    <NMakeCleanCommandLine>make clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>make clean ; make -r 2&gt;&amp;1 | sed -e %27s/\(.[a-zA-Z]\ \):\([0-9]\ \):/\1(\2):/%27</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>C:\devkitPro\devkitARM\arm-none-eabi\include;C:\devkitPro\libnds\include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes>$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+    <NMakeForcedUsingAssemblies>$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>make -r 2&gt;&amp;1 | sed -e %27s/\(.[a-zA-Z]\ \):\([0-9]\ \):/\1(\2):/%27</NMakeBuildCommandLine>
+    <NMakeOutput>ansi_console.nds</NMakeOutput>
+    <NMakeCleanCommandLine>make clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>make clean%3bmake -r 2&gt;&amp;1 | sed -e %27s/\(.[a-zA-Z]\ \):\([0-9]\ \):/\1(\2):/%27</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="__Makefile" />
+    <Text Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\background.cpp" />
+    <ClCompile Include="source\beach.cpp" />
+    <ClCompile Include="source\binaries.cpp" />
+    <ClCompile Include="source\bitmap.cpp" />
+    <ClCompile Include="source\bubbles.cpp" />
+    <ClCompile Include="source\button.cpp" />
+    <ClCompile Include="source\common.cpp" />
+    <ClCompile Include="source\controlbutton.cpp" />
+    <ClCompile Include="source\flipbook.cpp" />
+    <ClCompile Include="source\font.cpp" />
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\memory_tracking.cpp" />
+    <ClCompile Include="source\menu.cpp" />
+    <ClCompile Include="source\pinky.cpp" />
+    <ClCompile Include="source\rectangle.cpp" />
+    <ClCompile Include="source\screen.cpp" />
+    <ClCompile Include="source\screenengine.cpp" />
+    <ClCompile Include="source\screenframebuffer.cpp" />
+    <ClCompile Include="source\sprite.cpp" />
+    <ClCompile Include="source\wconsole.cpp" />
+    <ClCompile Include="source\window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\background.h" />
+    <ClInclude Include="source\beach.h" />
+    <ClInclude Include="source\binaries-array.h" />
+    <ClInclude Include="source\binaries.h" />
+    <ClInclude Include="source\bitmap.h" />
+    <ClInclude Include="source\bubbles.h" />
+    <ClInclude Include="source\button.h" />
+    <ClInclude Include="source\callback.h" />
+    <ClInclude Include="source\common.h" />
+    <ClInclude Include="source\controlbutton.h" />
+    <ClInclude Include="source\data_gbfs.h" />
+    <ClInclude Include="source\flipbook.h" />
+    <ClInclude Include="source\font.h" />
+    <ClInclude Include="source\FreePtr.h" />
+    <ClInclude Include="source\memory_tracking.h" />
+    <ClInclude Include="source\menu.h" />
+    <ClInclude Include="source\pinky.h" />
+    <ClInclude Include="source\rectangle.h" />
+    <ClInclude Include="source\screen.h" />
+    <ClInclude Include="source\screenengine.h" />
+    <ClInclude Include="source\screenframebuffer.h" />
+    <ClInclude Include="source\sprite.h" />
+    <ClInclude Include="source\wconsole.h" />
+    <ClInclude Include="source\window.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
